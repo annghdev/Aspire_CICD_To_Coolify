@@ -32,7 +32,7 @@ jobs:
         -c Release \
         -p:ContainerRegistry=docker.io \
         -p:ContainerRepository=${{ secrets.DOCKER_USERNAME }}/myapi \
-        -p:ContainerImageTag=1.0 \
+        -p:ContainerImageTag=lastest \
         -t:PublishContainer
 
     # SERVICE 2: Ví dụ WebFrontend (Sửa đường dẫn tới project thực tế của bạn)
@@ -42,7 +42,7 @@ jobs:
         -c Release \
         -p:ContainerRegistry=docker.io \
         -p:ContainerRepository=${{ secrets.DOCKER_USERNAME }}/myweb \
-        -p:ContainerImageTag=1.0 \
+        -p:ContainerImageTag=lastest \
         -t:PublishContainer
 
   deploy-to-coolify:

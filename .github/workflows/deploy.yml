@@ -32,7 +32,7 @@ jobs:
         -c Release \
         -p:ContainerRegistry=docker.io \
         -p:ContainerRepository=${{ secrets.DOCKER_USERNAME }}/myapi \
-        -p:ContainerImageTag=1.0 \ # để là lastest với dự án thực tế
+        -p:ContainerImageTag=1.0 \
         -t:PublishContainer
 
     # SERVICE 2: Ví dụ WebFrontend (Sửa đường dẫn tới project thực tế của bạn)

@@ -1,13 +1,13 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddDockerComposeEnvironment(".env");
+builder.AddDockerComposeEnvironment("artifacts");
 
 var cache = builder.AddRedis("cache");
 
-var apiService = builder.AddProject<Projects.AspireCiCdToCoolify_ApiService>("apiservice")
+var apiService = builder.AddProject<Projects.AspireCiCdToCoolify_ApiService>("myapi")
     .WithHttpHealthCheck("/health");
 
-builder.AddProject<Projects.AspireCiCdToCoolify_Web>("webfrontend")
+builder.AddProject<Projects.AspireCiCdToCoolify_Web>("myweb")
     .WithExternalHttpEndpoints()
     .WithHttpHealthCheck("/health")
     .WithReference(cache)

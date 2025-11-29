@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="AspireCiCdToCoolify.ApiService/AspireCiCdToCoolify.ApiService.csproj" />
+  <Project Path="AspireCiCdToCoolify.AppHost/AspireCiCdToCoolify.AppHost.csproj" />
+  <Project Path="AspireCiCdToCoolify.ServiceDefaults/AspireCiCdToCoolify.ServiceDefaults.csproj" />
+  <Project Path="AspireCiCdToCoolify.Web/AspireCiCdToCoolify.Web.csproj" />
+  <Project Path="UnitTests/UnitTests.csproj" />
+</Solution>

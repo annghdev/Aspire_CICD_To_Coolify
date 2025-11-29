@@ -28,7 +28,7 @@ jobs:
     # SERVICE 1: Ví dụ ApiService (Sửa đường dẫn tới project thực tế của bạn)
     - name: Publish ApiService
       run: |
-        dotnet publish ./ApiService/ApiService.csproj \
+        dotnet publish ./AspireCiCdToCoolify.ApiService/AspireCiCdToCoolify.ApiService.csproj \
         -c Release \
         -p:ContainerRegistry=docker.io \
         -p:ContainerRepository=${{ secrets.DOCKER_USERNAME }}/myapi \
@@ -38,7 +38,7 @@ jobs:
     # SERVICE 2: Ví dụ WebFrontend (Sửa đường dẫn tới project thực tế của bạn)
     - name: Publish WebFrontend
       run: |
-        dotnet publish ./Web/Web.csproj \
+        dotnet publish ./AspireCiCdToCoolify.Web/AspireCiCdToCoolify.Web.csproj \
         -c Release \
         -p:ContainerRegistry=docker.io \
         -p:ContainerRepository=${{ secrets.DOCKER_USERNAME }}/myweb \
